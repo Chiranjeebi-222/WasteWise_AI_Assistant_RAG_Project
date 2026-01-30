@@ -1,129 +1,125 @@
-🌱 WasteWise AI Assistant – AI-Powered Sustainability Assistant
+# WasteWise AI Assistant (RAG Project)
 
-WasteWise AI Assistant is an AI-powered sustainability awareness assistant built using Retrieval-Augmented Generation (RAG) and Streamlit.
-It helps users easily understand sustainability policies, waste management rules, energy conservation guidelines, and climate action practices by answering questions directly from trusted documents.
+## 📌 Project Overview
 
-This project was developed as part of an AI for Sustainability Virtual Internship, with a strong focus on responsible AI, real-world relevance, and meaningful impact.
+**WasteWise AI Assistant** is an AI-powered assistant built using
+**Retrieval-Augmented Generation (RAG)** technology.\
+It helps users get accurate and relevant information about waste
+management, recycling, and sustainability by retrieving knowledge from
+external data sources and generating intelligent responses.
 
-📌 Problem Statement
+------------------------------------------------------------------------
 
-Many sustainability rules and environmental policies already exist, but they are often:
+## 🚀 Features
 
-Stored in long PDF documents
+-   AI chatbot for waste management guidance\
+-   Retrieval-Augmented Generation (RAG) for accurate answers\
+-   Flask-based backend API\
+-   Machine Learning / NLP model integration\
+-   JSON-based API responses\
+-   Cross-Origin Resource Sharing (CORS) enabled
 
-Difficult for students and citizens to understand
+------------------------------------------------------------------------
 
-Hard to search or interpret quickly
+## 🛠️ Tech Stack
 
-As a result, awareness and correct implementation of sustainable practices remain low.
+-   **Python**
+-   **Flask**
+-   **Machine Learning / NLP**
+-   **RAG (Retrieval-Augmented Generation)**
+-   **NumPy, Joblib, SHAP (for explainability)**
+-   **HTML/CSS/JavaScript (Frontend - optional)**
 
-❓ Key Question
+------------------------------------------------------------------------
 
-How can AI be used to make sustainability policies more accessible, understandable, and actionable for everyone?
+## 📂 Project Structure
 
-💡 Solution Overview
+    WasteWise_AI_Assistant_RAG_Project/
+    │
+    ├── app.py               # Flask API server
+    ├── model/               # Trained ML model files
+    ├── data/                # Knowledge base / documents
+    ├── templates/           # HTML frontend files (if any)
+    ├── static/               # CSS/JS assets
+    ├── requirements.txt     # Python dependencies
+    └── README.md             # Project documentation
 
-WasteWise AI Assistant solves this problem using Retrieval-Augmented Generation (RAG):
+------------------------------------------------------------------------
 
-Sustainability documents are processed and converted into embeddings
+## ⚙️ Installation & Setup
 
-Relevant information is retrieved using vector similarity search
+### 1️⃣ Clone the Repository
 
-An AI model generates answers only from the retrieved document content
+``` bash
+git clone <your-repo-url>
+cd WasteWise_AI_Assistant_RAG_Project
+```
 
-Source documents are displayed to ensure transparency
+### 2️⃣ Create Virtual Environment
 
-This approach ensures:
+``` bash
+python -m venv venv
+source venv/bin/activate   # On Linux/Mac
+venv\Scripts\activate    # On Windows
+```
 
-Fact-based responses
+### 3️⃣ Install Dependencies
 
-No hallucinations
-
-Responsible and explainable AI usage
-
-🎯 SDG Alignment
-
-Primary SDG:
-
-SDG 12 – Responsible Consumption and Production
-
-Secondary SDGs:
-
-SDG 11 – Sustainable Cities and Communities
-
-SDG 13 – Climate Action
-
-🧠 Key Features
-
-📄 PDF-based sustainability knowledge system
-
-🔍 Retrieval-Augmented Generation (RAG)
-
-💬 Natural language question answering
-
-📌 Source-based answers (Responsible AI)
-
-🌍 Sustainability-focused use cases
-
-🖥️ Interactive Streamlit web interface
-
-🛠️ Tech Stack
-
-Programming Language: Python
-
-Frontend: Streamlit
-
-AI Model: FLAN-T5 (Hugging Face Transformers)
-
-Embeddings: Sentence Transformers
-
-Vector Database: FAISS
-
-Libraries & Tools:
-
-LangChain
-
-Transformers
-
-PyPDF
-
-Streamlit
-
-🚀 How It Works (RAG Pipeline)
-
-Sustainability PDFs are loaded into the system
-
-Documents are split into smaller text chunks
-
-Chunks are converted into vector embeddings
-
-Embeddings are stored in a FAISS vector database
-
-User asks a question
-
-Relevant chunks are retrieved using similarity search
-
-The AI generates an answer using only retrieved content
-
-Source documents are shown for transparency
-
-🖥️ Running the Application
-1️⃣ Install Dependencies
-
+``` bash
 pip install -r requirements.txt
+```
 
-2️⃣ Run the Streamlit App
+------------------------------------------------------------------------
 
-python -m streamlit run app.py
+## ▶️ Run the Project
 
-🧪 Sample Questions
+``` bash
+python app.py
+```
 
-How should electronic waste be disposed?
+The server will run on:
 
-What are the rules for waste segregation?
+    http://127.0.0.1:5000
 
-What is considered hazardous waste?
+------------------------------------------------------------------------
 
-How can energy be conserved?
+## 📡 API Example
 
-What actions help reduce carbon footprint?
+### POST Request
+
+``` json
+{
+  "query": "How to recycle plastic waste?"
+}
+```
+
+### Response
+
+``` json
+{
+  "success": true,
+  "answer": "Plastic waste can be recycled by..."
+}
+```
+
+------------------------------------------------------------------------
+
+## 📌 Future Improvements
+
+-   Add a web-based UI dashboard\
+-   Integrate database for user queries\
+-   Deploy on cloud (AWS / Heroku / Render)\
+-   Add voice assistant support
+
+------------------------------------------------------------------------
+
+## 👨‍💻 Author
+
+**Dibyajyoti Nath**\
+3rd Year Student \| AI & Full-Stack Developer
+
+------------------------------------------------------------------------
+
+## 📜 License
+
+This project is for educational purposes.
